@@ -9,8 +9,8 @@ import org.testng.TestListenerAdapter;
 
 import java.io.File;
 
-public class CustomTestListener extends TestListenerAdapter {
-    private static final Logger LOG = LogManager.getLogger(CustomTestListener.class);
+public class FailureListener extends TestListenerAdapter {
+    private static final Logger LOG = LogManager.getLogger(FailureListener.class);
     private static final String PATH_TO_SAVE_SCREEN_FORMAT = "src/main/resources/screenshots/%s.png";
 
     @Override

@@ -3,7 +3,7 @@ package com.halas;
 import com.halas.business.GmailAuthorisationBO;
 import com.halas.business.GmailMessageBO;
 import com.halas.driver.WebDriverManager;
-import com.halas.listener.CustomTestListener;
+import com.halas.listener.FailureListener;
 import com.halas.model.Message;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +17,7 @@ import static com.halas.util.parser.JsonParser.*;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-@Listeners({CustomTestListener.class})
+@Listeners({FailureListener.class})
 public class GmailTest {
     private static final Logger LOG = LogManager.getLogger(GmailTest.class);
 
