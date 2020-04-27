@@ -38,7 +38,7 @@ public class GmailTest {
         Message message = new Message(getWhoReceiveMessage(), getWhoReceiveCopyMessage(), getWhoReceiveHiddenCopyMessage(), getThemeMessage(), getMessage());
         gmailAuthorisationBO.authoriseUser(userLogin, userPassword);
         //assert to success login by userLogin
-        assertTrue(gmailAuthorisationBO.checkSuccessAuthorisation(userLogin));
+        assertTrue(gmailAuthorisationBO.isSuccessAuthorisation(userLogin));
         LOG.info("SUCCESS authorization.");
         gmailMessageBO.createDraftMessage(message);
         gmailMessageBO.goToDraftMessagesClickOnFirstOnTopMessage();

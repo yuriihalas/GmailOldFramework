@@ -4,6 +4,10 @@
 <!-- Change "false" to "tests", "methods", "classes" or "instances" for running in parallel.
  See more details in the TestNG documentation. -->
 <suite name="Gmail Suite" data-provider-thread-count="3" verbose="2">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
     <test name="gmail">
         <classes>
             <class name="com.halas.GmailTest"/>
